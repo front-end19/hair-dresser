@@ -1,0 +1,488 @@
+
+/* ----------------------------------global------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+*{
+    overflow-x: hidden;
+}
+h1,.btn,h5,h6{
+    text-transform: capitalize;
+}
+h3,small{
+    color: #009688;
+}
+/* ---------------------------------style-header-------------------------------------------- */
+.header-container{
+    max-width: 1300px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5),#009688),url('..//images/banner.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.logo{
+    width: 100px;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.logo img{
+    width: 100%;
+}
+/* -----------nav-bar-----------*/
+.hamburger-menu-style{
+    font-size: 30px;
+    position: absolute;
+    top: 3%;
+    right: 3.5%;
+    color: white;
+    background-color: #009688;
+    border: 1px solid #009688;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+nav ul.show-when-click{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    list-style: none;
+    background-color: #00968733;
+    text-align: left;
+    width: 150px;
+    height: 80vh;
+}
+nav ul.show-when-click li a:hover,:focus,.active{
+    color: rgba(255, 255, 255, 0.842);
+    border-bottom: 4px solid #009688;
+    padding: 3px;
+}
+ nav ul.show-when-click li{
+    padding: 15px;
+    margin-top: 7%;
+}
+ul.show-when-click li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+input,.show-when-click{
+    display: none;
+}
+#hamburger-menu:checked + .show-when-click{
+    display: block;
+}
+/*-------------text-area---------*/
+.text-area{
+    margin-top: 13%;
+}
+.text-area h1{
+    font-size: 100px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-family: 'Berkshire Swash', cursive;
+}
+.text-area p{
+    color: rgba(255, 255, 255, 0.712);
+    margin-bottom: 50px;
+    font-family: 'Berkshire Swash', cursive;
+}
+/*-------------btn-------------*/
+.btn{
+    all: unset;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.932);
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    width: 80px;
+    padding: 7px 10px;
+    margin-right: 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.btn:hover{
+    color: #009688;
+    background-color: white;
+}
+/*---------media queries-----------*/
+@media screen and (max-width: 700px) {
+    .header-container nav ul{
+        background-color: #009688;
+    }
+    .header-container nav ul a:hover,a:focus,a.active{
+       border-bottom: 4px solid white;
+       padding: 2px;
+    }
+}
+@media screen and (min-width: 500px),(max-width: 700px){
+    .hamburger-menu-style{
+        font-size: 25px;
+        padding: 2px;
+    }
+    .text-area h1{
+        font-size: 80px;
+    }
+
+
+}
+@media screen and (max-width: 500px){
+    .text-area h1{
+        font-size: 50px;
+    }
+    .text-area p{
+        font-size: 14px;
+    }
+    .btn{
+        display: block;
+        margin: 10px auto;
+    }
+
+}
+@media screen and (max-width: 300px){
+    .hamburger-menu-style{
+        font-size: 20px;
+        padding: 2px;
+    }
+    .text-area{
+        margin-top: 100px;
+    }
+    .text-area h1{
+        font-size: 35px;
+    }
+}
+/* ---------------------------------------features-----------------------------------------*/
+.big-container{
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 40px;
+}
+.text-area-heading{
+    padding-top: 20px;
+    text-align: center;
+}
+.text-area-heading p{
+    padding-top: 20px;
+    color: #009688;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+
+}
+.text-area-heading p::after{
+    content: ' ';
+    width: 40px;
+    height: 25px;
+    background-image: linear-gradient(#019587,#fff);
+    position: absolute;
+    top: 6px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.text-area-heading h1{
+   margin-bottom: 40px;
+}
+.featured-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.img-featured-container{
+    width: 400px;
+}
+.img-featured-container img{
+    width: 100%;
+    border-radius: 13px;
+}
+.sections--features-container{
+    margin-top: 30px;
+}
+.sections-features-container section{
+    margin-bottom: 30px;
+}
+.sections-features-container h3{
+    letter-spacing: 1px; 
+    font-weight: 200;
+    margin-bottom: 4px;
+}
+
+.sections-features-container h3 i{
+    border: 1px solid #009688;
+    border-radius: 7px;
+    padding: 4px;
+    width: 30px;
+    text-align: center;
+}
+.sections-features-container p{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.849);
+}
+/* ----------------media query of features---------------- */
+@media screen and (max-width: 600px)
+{
+    .text-area-heading h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .featured-container {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    .img-featured-container{
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    .img-featured-container img{
+        display: block;
+        width: 100%;
+        background-size: contain;
+    }
+}
+@media screen and (max-width: 300px){
+    .text-area-features h1{
+        font-size: 20px;
+    }
+}
+/*----------------------------------------services-----------------------------------------*/
+.services-container{
+    background-color: #f1f1f1;
+}
+.services-container .text-area-heading{
+    margin-top: -20px;
+}
+.sections-services-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.sections-services-container section{
+    width: 48%;
+    height: 48%;
+    margin-bottom: 10px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.sections-services-container section img{
+    width: 100%;
+    border-radius: 7px;
+}
+.img-overlay{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    border-radius: 7px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+.description-overlay{
+    position: absolute;
+    bottom: -1px;
+    transition: 3s;
+    opacity: 0;
+}
+.description-overlay h4{
+   color: rgba(255, 255, 255, 0.836);
+}
+.description-overlay p{
+    font-size: 14px;
+}
+.description-overlay p,hr{
+    color: rgba(255, 255, 255, 0.658);
+}
+.description-overlay hr{
+    width: 50%;
+    margin: 10px auto;
+    font-weight: bold;
+    height: 3px;
+    background-color: white;
+}
+.sections-services-container section:hover .img-overlay{
+    opacity: 1;
+
+}
+.sections-services-container section:hover .description-overlay{
+    bottom: 30%;
+    opacity: 1;
+}
+@media screen and (max-width: 600px){
+    .sections-services-container{
+        display: block;
+        margin-top: 20px;
+    }
+    .sections-services-container section{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+/*--------------------------------------------testimonials--------------------------------*/
+.sections-testimonials-container{
+    background-color: white;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 40px;
+}
+.sections-testimonials-container section{
+    border-bottom: 1px solid #00968715;
+    box-shadow: 0px 0px 10px #00968814;
+    margin-right: 14px;
+    margin-top: 20px;
+    transition: 1s;
+}
+.sections-testimonials-container section:hover{
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+.user-container{
+    margin-bottom: 10px;
+    display: flex;
+}
+.user-container img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.user-container h5 i.fab{
+    color: #27c0ff;
+    margin-left: 7px;
+    font-size: 15px;
+}
+.user-container small{
+    font-size: 11px;
+}
+.sections-testimonials-container section p{
+    font-size: 13px;
+    color: rgba(37, 36, 36, 0.911);
+}
+@media screen and (max-width: 600px){
+    .sections-testimonials-container{
+        display: block;
+    }
+    .sections-testimonials-container section{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .sections-testimonials-container section:hover{
+        transform: none;
+        margin-bottom: 20px;
+    }
+}
+/* --------------------------------------------footer----------------------------------- */
+.main-footer{
+    position: relative;
+}
+.main-footer .text-area-heading{
+    margin-top: 15px;
+}
+.main-footer img{
+    max-width: 220px;
+    position: absolute;
+    top: 20px;
+    left: 275px;
+    margin: 0px auto;
+    opacity: 0.1;
+}
+.sections-footer-flex{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.sections-footer-flex section{
+    margin-top: 30px;
+}
+.sections-footer-flex section h5{
+    font-size: 17px;
+    margin: 20px auto 10px auto;
+}
+.sections-footer-flex section p{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.sections-footer-flex section:not(:first-child){
+    text-align: right;
+}
+.sections-footer-flex i.fas,i.far{
+    color: #009688;
+    font-size: 14px;
+}
+.sections-footer-flex i.fas{
+    margin-left: 4px;
+}
+.sections-footer-flex i.far{
+    margin-right: 4px;
+    font-weight: 500;
+}
+/* ---------footer-end-container---------- */
+.footer-end-container{
+    text-align: center;
+}
+.social-media-container i{
+    color: #009688;
+    width: 26px;
+    text-align: center;
+    border: 1px solid #009688;
+    padding: 4px 0px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+.social-media-container i:hover{
+    background-color: #009688;
+    color: #fff;
+}
+.footer-end-container h6{
+    color: rgba(0, 0, 0, 0.767);
+}
+/*------------media query-------------*/
+@media screen and (max-width: 500px){
+    .main-footer img{
+        display: none;
+
+    }
+    .sections-footer-flex{
+        width: 100%;
+        display: block;
+    }
+    .sections-footer-flex section{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 300px){
+    .sections-footer-flex i.fas,i.far{
+        font-size: 15px;
+    }
+    .main-footer .text-area-heading h1{
+        font-size: 25px;
+    }
+}
